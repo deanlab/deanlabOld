@@ -2,6 +2,7 @@
 layout: page
 title: Equipment
 permalink: /equipment/
+active_nav: Equipment
 ---
 
 Equipment
