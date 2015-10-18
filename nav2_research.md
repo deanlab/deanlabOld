@@ -13,7 +13,7 @@ Below please find examples of some broad research topics being studied in our la
   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
   {% if research.imageid %}
-    {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{site.collections.research.thumbnail_options}}/{{research.imageid}}{% endcapture %}
+    {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{research.thumbnail_options}}/{{research.imageid}}{% endcapture %}
   {% elsif research.imageurl %}
     {% capture imageurl %}{{research.imageurl}}{% endcapture %}
   {% endif %}

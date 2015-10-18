@@ -12,7 +12,14 @@ cloudinary_id: codegaucho
 collections:
   research:
     output: true
-    thumbnail_options: "c_scale,w_256"
+
+defaults:
+  -
+    scope:
+      collection: research
+    values:
+      image_options: "c_scale,w_320"
+      thumbnail_options: "c_scale,w_256"
 
 # Build settings
 markdown: kramdown

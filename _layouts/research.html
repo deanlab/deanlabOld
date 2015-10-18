@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% if page.imageid %}
-  {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{site.collections.research.thumbnail_options}}/{{page.imageid}}{% endcapture %}
+  {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{page.image_options}}/{{page.imageid}}{% endcapture %}
 {% elsif page.imageurl %}
   {% capture imageurl %}{{page.imageurl}}{% endcapture %}
 {% endif %}
@@ -29,6 +29,8 @@ layout: default
     {{ content }}
   </div>
 
-  <footer>
+  <footer class="text-right">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
   </footer>
 </article>
