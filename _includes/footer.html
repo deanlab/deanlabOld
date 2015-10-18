@@ -11,12 +11,18 @@
         {{ site.title }}
       </div>
       <div>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        Built by
+        <a href="http://codegaucho.com">
+          CodeGaucho, LLC
+        </a>
       </div>
     </div>
     <div class="col-sm-4">
-
-
+      <div>
+        <a href="mailto:{{ site.email }}">
+          <i class="fa fa-envelope"></i> {{ site.email }}
+        </a>
+      </div>
 
       {% if site.github_username %}
       <div>

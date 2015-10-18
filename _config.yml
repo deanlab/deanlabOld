@@ -23,6 +23,7 @@ defaults:
       layout: research
       image_options: "c_scale,w_320"
       thumbnail_options: "c_scale,w_256"
+      active_nav: Research
   -
     scope:
       type: people
@@ -30,6 +31,7 @@ defaults:
       layout: people
       image_options: "c_scale,w_320"
       thumbnail_options: "c_scale,w_256"
+      active_nav: People
 
 # Build settings
 markdown: kramdown

@@ -11,7 +11,7 @@
 
     <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2" >
       <ul class="nav navbar-nav">
-        <li class="nav-item" id="nav_home">
+        <li class="nav-item {% if page.active_nav == "Home" %}active{% endif %}" id="nav_home">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <!--
@@ -23,10 +23,10 @@
         </li>
       -->
 
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li class="nav-item" id="nav_{{ page.title }}">
-            <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% for p in site.pages %}
+          {% if p.title %}
+          <li class="nav-item {% if p.title == page.active_nav %}active{% endif %}" id="nav_{{ p.title }}">
+            <a class="nav-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
           </li>
           {% endif %}
         {% endfor %}
