@@ -14,6 +14,8 @@ This is the People page, which will contain the index for the People custom coll
   {% elsif person.imageurl %}
     {% capture imageurl %}{{person.imageurl}}{% endcapture %}
   {% endif %}
+  
+
 
   <div class="media card card-block">
     {% if thecycle == 'odd' and imageurl %}
