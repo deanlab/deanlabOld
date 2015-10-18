@@ -1,5 +1,4 @@
 ---
-layout: research
 title: "Graphene Superlattices"
 date:   2015-10-17 09:53:14
 categories: superlattices graphene

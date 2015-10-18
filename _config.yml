@@ -4,7 +4,7 @@ email: tom@codegaucho.com
 description: > # this means to ignore newlines until "baseurl:"
   This is The Dean Lab, a nanoelectronics laboratory out of Columbia University.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://deanlab.github.io" # the base hostname & protocol for your site
 twitter_username: codegaucho
 github_username:  deanlab
 cloudinary_id: codegaucho
@@ -12,12 +12,22 @@ cloudinary_id: codegaucho
 collections:
   research:
     output: true
+  people:
+    output: true
 
 defaults:
   -
     scope:
-      collection: research
+      type: research
     values:
+      layout: research
+      image_options: "c_scale,w_320"
+      thumbnail_options: "c_scale,w_256"
+  -
+    scope:
+      type: people
+    values:
+      layout: people
       image_options: "c_scale,w_320"
       thumbnail_options: "c_scale,w_256"
 

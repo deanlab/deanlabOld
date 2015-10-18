@@ -1,5 +1,4 @@
 ---
-layout: research
 title:  "Emergent phenomenon in layered heterostructures"
 date:   2015-10-17 09:53:14
 categories: heterostructures graphene
