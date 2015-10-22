@@ -26,6 +26,48 @@ layout: default
   {% endif %}
 
   <div class="media-body">
+    <dl>
+        <dt>Name</dt>
+        <dd>{{ page.name }}</dd>
+
+        {% if page.title %}
+        <dt>Title</dt>
+        <dd>{{ page.title }}</dd>
+        {% endif %}
+
+        {% if page.lab %}
+        <dt>Lab</dt>
+        <dd>{{ page.lab }}</dd>
+        {% endif %}
+
+        {% if page.office %}
+        <dt>Office</dt>
+        <dd>{{ page.office }}</dd>
+        {% endif %}
+
+        {% if page.phone %}
+        <dt>Phone</dt>
+        <dd>{{ page.phone }}</dd>
+        {% endif %}
+
+        {% if page.email %}
+        <dt>EMail</dt>
+        <dd>{{ page.email }}</dd>
+        {% endif %}
+
+        {% if page.twitter %}
+        <dt>Twitter</dt>
+        <dd>{{ page.twitter }}</dd>
+        {% endif %}
+
+        {% if page.facebook %}
+        <dt>Facebook</dt>
+        <dd>{{ page.facebook }}</dd>
+        {% endif %}
+      </dl>
+
+      {{ page.content }}
+
     {{ content }}
   </div>
 

@@ -1,7 +1,8 @@
 ---
 layout: people
 name: "Cory R. Dean"
-title: "king"
+title: "Assistant Professor"
+description: "Cory is the fearless leader of the Dean Lab"
 imageid: v1381371702/pdjxeo8dxqsvehsjxjoo
 lab: "NWC 704"
 office: "CEPSR 916"

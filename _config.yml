@@ -14,6 +14,8 @@ collections:
     output: true
   people:
     output: true
+  equipment:
+    output: true
 
 defaults:
   -
@@ -30,8 +32,16 @@ defaults:
     values:
       layout: people
       image_options: "c_scale,w_320"
-      thumbnail_options: "c_scale,w_256"
+      thumbnail_options: "c_crop,h_200,w_246"
       active_nav: People
+  -
+    scope:
+      type: equipment
+    values:
+      layout: equipment
+      image_options: "c_scale,w_320"
+      thumbnail_options: "c_scale,w_256"
+      active_nav: Equipment
 
 # Build settings
 markdown: kramdown

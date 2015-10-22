@@ -5,79 +5,40 @@ permalink: /people/
 active_nav: People
 ---
 
-This is the People page, which will contain the index for the People custom collection
+We have some great people working at the Dean Lab - meet some of them below.
+
+{% raw %}
+<div class="container">
+  <div class="row">
+{% endraw %}
 
 {% for person in site.people %}
-  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-
   {% if person.imageid %}
     {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{person.thumbnail_options}}/{{person.imageid}}{% endcapture %}
   {% elsif person.imageurl %}
     {% capture imageurl %}{{person.imageurl}}{% endcapture %}
   {% endif %}
-  
 
+  {% cycle '', '', '', '</div><div class="row">' %}
+  <div class="col-sm-4">
+    <div class="card">
+      <img alt="100%x200" class="card-img-top img-responsive" style="display: block;" src="{{ imageurl }}">
+      <div class="card-block">
 
-  <div class="media card card-block">
-    {% if thecycle == 'odd' and imageurl %}
-      <a class="media-left" href="#">
-        <img src="{{ imageurl }}" class="img-responsive" >
-      </a>
-    {% endif %}
-
-    <div class="media-body">
-      <h4 class="media-heading">
-        <a href="{{ person.url | prepend: site.baseurl }}">{{ person.name }}</a>
-      </h4>
-
-      <dl>
-        <dt>Name</dt>
-        <dd>{{ person.name }}</dd>
-
-        {% if person.title %}
-        <dt>Title</dt>
-        <dd>{{ person.title }}</dd>
-        {% endif %}
-
-        {% if person.lab %}
-        <dt>Lab</dt>
-        <dd>{{ person.lab }}</dd>
-        {% endif %}
-
-        {% if person.office %}
-        <dt>Office</dt>
-        <dd>{{ person.office }}</dd>
-        {% endif %}
-
-        {% if person.phone %}
-        <dt>Phone</dt>
-        <dd>{{ person.phone }}</dd>
-        {% endif %}
-
-        {% if person.email %}
-        <dt>EMail</dt>
-        <dd>{{ person.email }}</dd>
-        {% endif %}
-
-        {% if person.twitter %}
-        <dt>Twitter</dt>
-        <dd>{{ person.twitter }}</dd>
-        {% endif %}
-
-        {% if person.facebook %}
-        <dt>Facebook</dt>
-        <dd>{{ person.facebook }}</dd>
-        {% endif %}
-      </dl>
-
-      {{ person.content }}
+      <h3 class="card-title"><a href="{{ person.url | prepend: site.baseurl }}">{{ person.name }}</a></h3>
+      <h4>{{ person.title }}</h4>
+      <p class="card-text">{{ person.description }}</p>
+      <p class="card-text"><small class="text-muted"><a href="{{ person.url | prepend: site.baseurl }}">More...</a></small></p>
     </div>
-
-    {% if thecycle == 'even' and imageurl %}
-      <a class="media-right" href="#">
-        <img src="{{ imageurl }}" class="img-responsive" >
-      </a>
-    {% endif %}
   </div>
+</div>
 {% endfor %}
+
+{% raw %}
+  </div>
+</div>
+{% endraw %}
+
+
+
 

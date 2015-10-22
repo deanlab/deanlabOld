@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% if page.imageid %}
+  {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{page.image_options}}/{{page.imageid}}{% endcapture %}
+{% elsif page.imageurl %}
+  {% capture imageurl %}{{page.imageurl}}{% endcapture %}
+{% endif %}
+
+<ol class="container breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><a href="/research/">Equipment</a></li>
+  <li class="active">{{ page.title }}</li>
+</ol>
+
+<article class="media">
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  {% if imageurl %}
+    <a class="media-left" href="#">
+      <img src="{{ imageurl }}" class="img-responsive" >
+    </a>
+  {% endif %}
+
+  <div class="media-body">
+    {{ content }}
+  </div>
+
+</article>
