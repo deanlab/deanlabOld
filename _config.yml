@@ -16,6 +16,8 @@ collections:
     output: true
   equipment:
     output: true
+  news:
+    output: true
 
 defaults:
   -
@@ -42,6 +44,14 @@ defaults:
       image_options: "c_scale,w_320"
       thumbnail_options: "c_scale,w_256"
       active_nav: Equipment
+  -
+    scope:
+      type: news
+    values:
+      layout: news
+      image_options: "c_scale,w_320"
+      thumbnail_options: "c_scale,w_256"
+      active_nav: News
 
 # Build settings
 markdown: kramdown

@@ -10,7 +10,7 @@ Our research focuses on both fundamental studies, and technological applications
 Below please find examples of some broad research topics being studied in our lab; under the equipment tab you can learn more about our experimental capabilities.
 
 {% for research in site.research %}
-  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% capture thecycle %}{% cycle 'right', 'left' %}{% endcapture %}
 
   {% if research.imageid %}
     {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{research.thumbnail_options}}/{{research.imageid}}{% endcapture %}
@@ -19,9 +19,9 @@ Below please find examples of some broad research topics being studied in our la
   {% endif %}
 
   <div class="media card card-block">
-    {% if thecycle == 'odd' and imageurl %}
-      <a class="media-left" href="#">
-        <img src="{{ imageurl }}" class="img-responsive" >
+    {% if thecycle == 'left' and imageurl %}
+      <a class="media-left" href="{{ research.url | prepend: site.baseurl }}">
+        <img src="{{ imageurl }}" >
       </a>
     {% endif %}
 
@@ -32,9 +32,9 @@ Below please find examples of some broad research topics being studied in our la
       {{ research.content }}
     </div>
 
-    {% if thecycle == 'even' and imageurl %}
-      <a class="media-right" href="#">
-        <img src="{{ imageurl }}" class="img-responsive" >
+    {% if thecycle == 'right' and imageurl %}
+      <a class="media-right" href="{{ research.url | prepend: site.baseurl }}">
+        <img src="{{ imageurl }}" >
       </a>
     {% endif %}
   </div>
