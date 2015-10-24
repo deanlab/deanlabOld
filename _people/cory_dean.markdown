@@ -1,5 +1,4 @@
 ---
-layout: people
 name: "Cory R. Dean"
 title: "Assistant Professor"
 description: "Cory is the fearless leader of the Dean Lab"
