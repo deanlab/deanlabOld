@@ -20,7 +20,7 @@ Some of the equipment here at the Dean Lab
   {% endif %}
 
   {% cycle '', '', '', '', '</div><div class="row">' %}
-  <div class="col-sm-3">
+  <div class="col-lg-3">
     <div class="card">
       <img alt="100%x200" class="card-img-top img-responsive" style="display: block;" src="{{ imageurl }}">
       <div class="card-block">

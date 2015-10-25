@@ -1,0 +1,35 @@
+---
+layout: default
+active_nav: Home
+---
+
+<h1>Welcome to the Dean Lab</h1>
+
+{% assign features = site.news | where: "category", "feature"  %}
+{% if features %}
+  <div style="float: right;">
+    {% for post in features  %}
+      {% if post.imageid %}
+        {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{post.thumbnail_options}}/{{post.imageid}}{% endcapture %}
+      {% elsif post.imageurl %}
+        {% capture imageurl %}{{post.imageurl}}{% endcapture %}
+      {% endif %}
+      
+      <div class="card">
+      <a class="media-left" href="{{ post.url | prepend: site.baseurl }}">
+        <img alt="100%x200" class="media-object" src="{{ imageurl }}">
+        {{ post.title }}
+      </a>
+      </div>
+    {% endfor %} 
+  </div>
+{% endif %}
+
+<div class="container">
+<p>
+The Dean Lab is an experimental condensed matter physics laboratory at Columbia University in the city of New York. We study novel 2D materials for a wide range of multidisciplinary efforts with collaborations across Physics, Electrical and Mechanical Engineering, Opto-electronics, Chemistry and even Biology.
+</p><p>
+Please explore these pages to learn more about our group and our research opportunities, and do not hesitate to contact me if you have any questions.
+</p>
+</div>
+

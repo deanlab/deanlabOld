@@ -15,27 +15,17 @@ categories: jekyll update
     {% capture imageurl %}{{newsitem.imageurl}}{% endcapture %}
   {% endif %}
 
-  <div class="media card card-block">
-
-    {% if thecycle == 'left' and imageurl %}
-    <a class="media-left" href="{{ newsitem.url | prepend: site.baseurl }}">
-      <img alt="100%x200" class="media-object" src="{{ imageurl }}">
-    </a>
-    {% endif %}
-
-    <div class="media-body">
-      <h4 class="media-heading"><a href="{{ newsitem.url | prepend: site.baseurl }}">{{ newsitem.title }}</a></h4>
-        {{ newsitem.content }}
+  <article class="card card-block" style="clear: both;">
+    <h4 style="text-align: {% cycle 'headingcycle': 'right', 'left' %};">
+        <a href="{{ newsitem.url | prepend: site.baseurl }}">{{ newsitem.title }}</a>
+    </h4>
+    <img src="{{ imageurl }}" style="margin: 15px; float: {% cycle 'imagecycle': 'left', 'right' %};" />
+    <div>
+      
+      {{ newsitem.content }}
     </div>
 
-
-    {% if thecycle == 'right' and imageurl %}
-    <a class="media-right" href="{{ newsitem.url | prepend: site.baseurl }}">
-      <img alt="100%x200" class="media-object" src="{{ imageurl }}">
-    </a>
-    {% endif %}
-   
-
-  </div>
+    <div style="clear: both;"></div>
+  </article>
     
 {% endfor %}

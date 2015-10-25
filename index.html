@@ -6,23 +6,43 @@ active_nav: Home
 <h1>Welcome to the Dean Lab</h1>
 
 {% assign features = site.news | where: "category", "feature"  %}
-{% if features %}
-  <div style="float: right;">
+{% assign highlights = site.research | where: "category", "feature"  %}
+{% if features or highlights %}
+  <aside style="float: right;">
     {% for post in features  %}
       {% if post.imageid %}
-        {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{post.thumbnail_options}}/{{post.imageid}}{% endcapture %}
+        {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{post.feature_options}}/{{post.imageid}}{% endcapture %}
       {% elsif post.imageurl %}
         {% capture imageurl %}{{post.imageurl}}{% endcapture %}
       {% endif %}
       
-      <div class="card">
-      <a class="media-left" href="{{ post.url | prepend: site.baseurl }}">
-        <img alt="100%x200" class="media-object" src="{{ imageurl }}">
-        {{ post.title }}
-      </a>
-      </div>
+      <article class="card" style="width: 340px; margin:0 auto; text-align: center;">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <img alt="100%x200" src="{{ imageurl }}">
+          Research Highlight:
+          {{ post.title }}
+        </a>
+      </article>
     {% endfor %} 
-  </div>
+
+    {% for post in highlights  %}
+      {% if post.imageid %}
+        {% capture imageurl %}http://res.cloudinary.com/{{site.cloudinary_id}}/image/upload/{{post.feature_options}}/{{post.imageid}}{% endcapture %}
+      {% elsif post.imageurl %}
+        {% capture imageurl %}{{post.imageurl}}{% endcapture %}
+      {% endif %}
+      
+      <article class="card"style="width: 340px; margin:0 auto; text-align: center;">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <img alt="100%x200" src="{{ imageurl }}">
+          Research Highlight:
+          {{ post.title }}
+        </a>
+      </article>
+    {% endfor %} 
+
+
+  </aside>
 {% endif %}
 
 <div class="container">

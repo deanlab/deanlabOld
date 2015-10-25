@@ -8,7 +8,7 @@ url: "http://deanlab.github.io" # the base hostname & protocol for your site
 twitter_username: codegaucho
 github_username:  deanlab
 cloudinary_id: codegaucho
-googleplus: 107324455351703736624
+google_plus: 107324455351703736624
 
 collections:
   research:
@@ -21,11 +21,6 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
-      category: feature
-    values:
-      feature_options: "c_scale,w_320"
   -
     scope:
       type: research

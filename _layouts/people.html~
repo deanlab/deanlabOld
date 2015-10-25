@@ -30,48 +30,38 @@ layout: default
 
   <div class="media-body">
 
+    <dl class="dl-horizontal">
         {% if page.lab %}
-          <div>
-            Lab: {{ page.lab }}
-          </div>
+        <dt>Lab</dt>
+        <dd>{{ page.lab }}</dd>
         {% endif %}
 
         {% if page.office %}
-          <div>
-            Office: {{ page.office }}
-          </div>
+        <dt>Office</dt>
+        <dd>{{ page.office }}</dd>
         {% endif %}
 
         {% if page.phone %}
-          <div>
-            Phone: {{ page.phone }}
-          </div>
+        <dt>Phone</dt>
+        <dd>{{ page.phone }}</dd>
         {% endif %}
 
         {% if page.email %}
-          <div>
-            <a href="mailto:{{ page.email }}">
-              <i class="fa fa-envelope"></i> {{ page.email }}
-            </a>
-          </div>
+        <dt>EMail</dt>
+        <dd>{{ page.email }}</dd>
         {% endif %}
+
+        {% if page.facebook %}
+        <dt>Facebook</dt>
+        <dd>{{ page.facebook }}</dd>
+        {% endif %}
+      </dl>
 
         {% if page.twitter %}
-          <div>
-            <a href="https://twitter.com/{{ page.twitter }}" >
-              <i class="fa fa-twitter"></i>
-              <span class="username"> {{ page.twitter }}</span>
-            </a>
-          </div>
-        {% endif %}
-
-        {% if page.googleplus %}
-          <div>
-            <a href="https://plus.google.com/{{ page.googleplus }}/posts"<>
-              <i class="fa fa-google-plus"></i>
-              <span class="username">google plus</span>
-            </a>
-          </div>
+          <a href="https://twitter.com/{{ page.twitter }}<">
+          <i class="fa fa-twitter"></i>
+          <span class="username"> codegaucho</span>
+          </a>
         {% endif %}
 
 

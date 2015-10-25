@@ -44,6 +44,16 @@
       </div>
       {% endif %}
 
+      {% if site.google_plus %}
+      <div>
+        <a href="https://plus.google.com/{{ site.googleplus }}/posts}">
+          <i class="fa fa-google-plus"></i>
+
+          <span class="username"> google plus</span>
+        </a>
+      </div>
+      {% endif %}
+
       <div>
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
           <i class="fa fa-rss"></i> RSS

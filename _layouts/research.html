@@ -14,22 +14,14 @@ layout: default
   <li class="active">{{ page.title }}</li>
 </ol>
 
-<article class="media">
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-
-  {% if imageurl %}
-    <a class="media-left" href="#">
-      <img src="{{ imageurl }}" class="img-responsive" >
-    </a>
-  {% endif %}
-
-  <div class="media-body">
-    {{ content }}
+<article style="clear: both;">
+  <h1>{{ page.title }}</h1>
+  <img src="{{ imageurl }}" style="margin: 15px; float: right;" />
+  <div>    
+    {{content }}
   </div>
 
-  <footer class="text-right">
+  <footer class="text-right" style="clear: both;">
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="addthis_sharing_toolbox"></div>
   </footer>

@@ -17,11 +17,12 @@ Below please find examples of some broad research topics being studied in our la
   {% endif %}
 
   <article class="card card-block" style="clear: both;">
-    <img src="{{ imageurl }}" style="margin: 15px; float: {% cycle 'right', 'left' %};" />
-    <div>
-      <h4>
+    <h4 style="text-align: {% cycle 'headingcycle': 'right', 'left' %};">
         <a href="{{ research.url | prepend: site.baseurl }}">{{ research.title }}</a>
-      </h4>
+    </h4>
+    <img src="{{ imageurl }}" style="margin: 15px; float: {% cycle 'imagecycle': 'left', 'right' %};" />
+    <div>
+      
       {{ research.content }}
     </div>
 
