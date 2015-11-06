@@ -5,6 +5,8 @@ permalink: /contact/
 active_nav: Contact
 ---
 
+![Professor Dean at blackboard](http://res.cloudinary.com/codegaucho/image/upload/c_crop,h_256,w_634/v1446776849/profdeanblackboard_wblhve)
+
 Cory R Dean
 
 Asst. Professor 
