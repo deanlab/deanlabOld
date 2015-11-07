@@ -65,11 +65,21 @@ layout: default
           </div>
         {% endif %}
 
-        {% if page.googleplus %}
+        {% if page.google_plus %}
           <div>
-            <a href="https://plus.google.com/{{ page.googleplus }}/posts"<>
+            <a href="https://plus.google.com/{{ page.google_plus }}/posts"<>
               <i class="fa fa-google-plus"></i>
               <span class="username">google plus</span>
+            </a>
+          </div>
+        {% endif %}
+
+        {% if site.google_scholar %}
+          <div>
+            <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}&hl=en">
+              <i class="fa fa-graduation-cap"></i>
+
+              <span class="username"> google scholar</span>
             </a>
           </div>
         {% endif %}

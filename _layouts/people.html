@@ -14,22 +14,17 @@ layout: default
   <li class="active">{{ page.name }}</li>
 </ol>
 
-<article class="media">
-  <header>
-    <h1>{{ page.name }}</h1>
-    {% if page.title %}
-    <h2>{{ page.title }}</h2>
-    {% endif %}
-  </header>
+<div class="card">
+  <img alt="100%x200" class="card-img-top img-responsive" style="display: block;" src="{{ imageurl }}">
+  <div class="card-block">
 
-  {% if imageurl %}
-    <a class="media-left" href="#">
-      <img src="{{ imageurl }}" class="img-responsive" >
-    </a>
-  {% endif %}
-
-  <div class="media-body">
-
+        <header>
+          <h1>{{ page.name }}</h1>
+          {% if page.title %}
+          <h2>{{ page.title }}</h2>
+          {% endif %}
+        </header>
+        
         {% if page.lab %}
           <div>
             Lab: {{ page.lab }}
@@ -48,49 +43,47 @@ layout: default
           </div>
         {% endif %}
 
-        {% if page.email %}
-          <div>
+        {{ content }}
+
+        <ul class="list-inline">
+          {% if page.email %}
+          <li>
             <a href="mailto:{{ page.email }}">
               <i class="fa fa-envelope"></i> {{ page.email }}
             </a>
-          </div>
-        {% endif %}
+          </li>
+          {% endif %}
 
-        {% if page.twitter %}
-          <div>
+          {% if page.twitter %}
+          <li>
             <a href="https://twitter.com/{{ page.twitter }}" >
               <i class="fa fa-twitter"></i>
               <span class="username"> {{ page.twitter }}</span>
             </a>
-          </div>
-        {% endif %}
+          </li>
+          {% endif %}
 
-        {% if page.google_plus %}
-          <div>
+          {% if page.google_plus %}
+          <li>
             <a href="https://plus.google.com/{{ page.google_plus }}/posts"<>
               <i class="fa fa-google-plus"></i>
               <span class="username">google plus</span>
             </a>
-          </div>
-        {% endif %}
+          </li>
+          {% endif %}
 
-        {% if site.google_scholar %}
-          <div>
+          {% if site.google_scholar %}
+          <li>
             <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}&hl=en">
               <i class="fa fa-graduation-cap"></i>
 
               <span class="username"> google scholar</span>
             </a>
-          </div>
-        {% endif %}
+          </li>
+          {% endif %}
+          
+        </ul>
+   
+  </div><!-- card-block -->
+</div><!-- card -->
 
-
-
-    {{ content }}
-  </div>
-
-  <footer class="text-right">
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_sharing_toolbox"></div>
-  </footer>
-</article>

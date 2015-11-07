@@ -10,7 +10,7 @@ layout: default
 
 <ol class="container breadcrumb">
   <li><a href="/">Home</a></li>
-  <li><a href="/equipment/">Equipment</a></li>
+  <li><a href="/research/">Equipment</a></li>
   <li class="active">{{ page.title }}</li>
 </ol>
 
