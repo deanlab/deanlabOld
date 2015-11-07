@@ -8,8 +8,7 @@ url: "http://deanlab.github.io" # the base hostname & protocol for your site
 twitter_username: codegaucho
 github_username:  deanlab
 cloudinary_id: codegaucho
-google_plus: 107324455351703736624
-google_scholar: z3z-PV8AAAAJ
+googleplus: 107324455351703736624
 
 collections:
   research:
