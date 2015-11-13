@@ -5,13 +5,15 @@ description: > # this means to ignore newlines until "baseurl:"
   This is The Dean Lab, a nanoelectronics laboratory out of Columbia University.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://deanlab.github.io" # the base hostname & protocol for your site
-twitter_username: codegaucho
+# twitter_username: codegaucho
 github_username:  deanlab
 cloudinary_id: codegaucho
 google_plus: 107324455351703736624
 google_scholar: z3z-PV8AAAAJ
 
 collections:
+  navpages:
+    output: true
   research:
     output: true
   people:
@@ -27,6 +29,11 @@ defaults:
       category: feature
     values:
       feature_options: "c_scale,w_320"
+  -
+    scope:
+      type: navpages
+    values:
+      layout: page
   -
     scope:
       type: research
