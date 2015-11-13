@@ -1,6 +1,6 @@
 # Site settings
 title: The Dean Lab
-email: cory.dean@gmail.com
+email: tom@codegaucho.com
 description: > # this means to ignore newlines until "baseurl:"
   This is The Dean Lab, a nanoelectronics laboratory out of Columbia University.
 baseurl: "" # the subpath of your site, e.g. /blog/
