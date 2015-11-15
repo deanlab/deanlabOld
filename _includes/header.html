@@ -30,17 +30,60 @@
               {% endif %}
               
             </a>
-          </li>
+          </li> 
           {% endif %}
         {% endfor %}
       </ul>
 
-      <!--
-      <form class="form-inline navbar-form pull-right">
-        <input class="form-control" type="text" placeholder="Search">
-        <button class="btn btn-success-outline" type="submit">Search</button>
+
+      {% if site.freefind %}
+      <form id="ffresult_sbox1" class="form-inline navbar-form pull-right" method="get" action="http://search.freefind.com/find.html" onsubmit="ffresults.show(1);">
+        <input type="hidden" name="si" value="{{site.freefind}}">
+		<input type="hidden" name="pid" value="r">
+		<input type="hidden" name="n" value="0">
+		<input type="hidden" name="_charset_" value="">
+		<input type="hidden" name="bcd" value="&#247;">
+		<input type="hidden" name="sbv" value="j1">
+   
+        <div class="input-group">
+          <input class="form-control" type="text" name="query" placeholder="Search">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
       </form>
-      -->
+      {% endif %}
+
     </div>
   </nav>
 </header>
+
+<!-- start bootsrap modal for search results -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="searchResultsModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Search Results</h4>
+      </div>
+
+      <div class="modal-body">
+	    <iframe  id="ffresult_ifr" name="ffresult_frame"  scrolling="auto" frameborder="0" width="100%" height="395px"></iframe>
+	  </div>
+
+      <div class="modal-footer">
+        search results from <a href="http://freefind.com">FreeFind</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end bootsrap modal for search results -->
+
+

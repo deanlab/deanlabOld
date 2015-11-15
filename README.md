@@ -1,7 +1,7 @@
 # deanlab.github.io
-A jekyll based website for DeanLab, a nanoelectronics laboratory out of Columbia University
+A jekyll based website for [The Dean Lab], a nanoelectronics laboratory out of Columbia University
 
-This will be hosted using github pages.
+This will be hosted using github pages -> [deanlab github pages]
 
 # Usage
 
@@ -50,7 +50,7 @@ and checking it in a browser.  If all goes well, deploy to github by pushing you
 $ git add -A
 $ git commit -m "Added info on work holes"
 $ git push origin master
-'''
+```
 
 
 ## image handling
@@ -100,3 +100,5 @@ facebook: 100006029281065
 
 
 [Cloudinary]: http://cloudinary.com/
+[deanlab github pages]: http://deanlab.github.io/
+[The Dean Lab]: https://deanlab.com

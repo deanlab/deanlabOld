@@ -38,14 +38,4 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- end favicon stuff -->
-
-
-<style>
-/* Option 1A: Override a single element's box model via CSS */
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button 
-{
-  box-sizing: content-box;
-  line-height: normal;
-}
-</style>
 </head>
