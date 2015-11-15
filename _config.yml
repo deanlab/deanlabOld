@@ -68,5 +68,8 @@ defaults:
       thumbnail_options: "c_scale,w_256"
       active_nav: News
 
+gems:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
